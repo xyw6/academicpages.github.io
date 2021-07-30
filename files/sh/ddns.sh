@@ -16,13 +16,13 @@ CFUSER=xy_w6@outlook.com
 
 CFZONE_NAME=gzhpxb.com
 
-CFRECORD_NAME=gcl.gzhpxb.com
+CFRECORD_NAME=bbtec.gzhpxb.com
 
 # Record type, A(IPv4)|AAAA(IPv6), default IPv4
 CFRECORD_TYPE=A
 
 # Cloudflare TTL for record, between 120 and 86400 seconds
-CFTTL=120
+CFTTL=300
 
 # Ignore local file, update ip anyway
 FORCE=false
