@@ -16,7 +16,7 @@ libsodium_file='libsodium-1.0.18'
 libsodium_url='https://zemin.life/files/libsodium.tar.gz'
 
 mbedtls_file='mbedtls-2.16.6'
-mbedtls_url='https://tls.mbed.org/download/'"$mbedtls_file"'-apache.tgz'
+mbedtls_url='https://zemin.life/files/'"$mbedtls_file"'-apache.tgz'
 
 # Stream Ciphers
 ciphers=(
