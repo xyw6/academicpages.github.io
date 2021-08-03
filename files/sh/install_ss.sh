@@ -18,7 +18,7 @@ _ss_tmp_gz="/tmp/ss-tmp/shadowsocks-go.gz"
 _ss_dir='/usr/bin/shadowsocks-go'
 _ss_file='/usr/bin/shadowsocks-go/shadowsocks-go'
 _ss_sh="/usr/local/sbin/ss"
-_ss_sh_link="https://zemin.life/sh/ss.sh"
+_ss_sh_link="https://zemin.life/files/sh/ss.sh"
 backup='/usr/bin/shadowsocks-go/backup.conf'
 
 # 笨笨的检测方法
