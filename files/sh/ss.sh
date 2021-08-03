@@ -13,10 +13,10 @@ export PATH
 cur_dir=$(pwd)
 
 libsodium_file='libsodium-1.0.18'
-libsodium_url='https://zemin.life/files/libsodium.tar.gz'
+libsodium_url='https://zemin.life/files/libsodium-1.0.18.tar.gz'
 
 mbedtls_file='mbedtls-2.16.6'
-mbedtls_url='https://zemin.life/files/'"$mbedtls_file"'-apache.tgz'
+mbedtls_url='https://zemin.life/files/mbedtls-2.16.6-apache.tgz'
 
 # Stream Ciphers
 ciphers=(
