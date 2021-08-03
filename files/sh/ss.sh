@@ -25,7 +25,7 @@ _ss_dir='/usr/bin/shadowsocks-go'
 _ss_file='/usr/bin/shadowsocks-go/shadowsocks-go'
 _ss_sh="/usr/local/sbin/ss"
 _ss_sh_ver="0.22"
-_ss_sh_link="https://zemin.life/sh/ss.sh"
+_ss_sh_link="https://zemin.life/files/sh/ss.sh"
 _ss_pid=$(pgrep -f $_ss_file)
 backup='/usr/bin/shadowsocks-go/backup.conf'
 
