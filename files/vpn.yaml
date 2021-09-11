@@ -1,0 +1,99 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: silent
+
+proxies:
+  - name: NL
+    type: ss
+    server: 1s.zemin.life
+    port: 51490
+    cipher: aes-128-gcm
+    password: yangchaoyue
+    udp: true
+    skip-cert-verify: true
+
+  - name: LA
+    type: ss
+    server: gzhpxb.com
+    port: 51490
+    cipher: aes-128-gcm
+    password: yangchaoyue
+    udp: true
+    skip-cert-verify: true
+
+  - name: HK
+    type: ss
+    server: cmi.gzhpxb.com
+    port: 51490
+    cipher: aes-128-gcm
+    password: yangchaoyue
+    udp: true
+    skip-cert-verify: true
+
+  - name: CM
+    type: ss
+    server: cm.gzhpxb.com
+    port: 49101
+    cipher: aes-128-gcm
+    password: yangchaoyue
+    udp: true
+    skip-cert-verify: true
+
+proxy-groups:
+  - name: China
+    type: select
+    proxies:
+       - LA
+       - HK
+       - CM
+       - DIRECT
+
+  - name: Porn
+    type: select
+    proxies:
+       - NL
+       - DIRECT
+rules:
+  - DOMAIN-SUFFIX,l.qq.com,REJECT
+  - DOMAIN-SUFFIX,btrace.video.qq.com,REJECT
+  - DOMAIN-SUFFIX,rpt.gdt.qq.com,REJECT
+  - DOMAIN-SUFFIX,pingtas.qq.com,REJECT
+  - DOMAIN-SUFFIX,firebaselogging-pa.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,adsystem,REJECT
+  - DOMAIN-SUFFIX,criteo.com,REJECT
+  - DOMAIN-SUFFIX,taboola.com,REJECT
+  - DOMAIN-SUFFIX,bttrack.com,REJECT
+  - DOMAIN-SUFFIX,onaudience.com,REJECT
+  - DOMAIN-SUFFIX,smartadserver.com,REJECT
+  - DOMAIN-SUFFIX,bidswitch.net,REJECT
+  - DOMAIN-SUFFIX,mfadsrvr.com,REJECT
+  - DOMAIN-SUFFIX,parsely.com,REJECT
+  - DOMAIN-SUFFIX,adnxs.com,REJECT
+  - DOMAIN-SUFFIX,addthis.com,REJECT
+  - DOMAIN-KEYWORD,advertising,REJECT
+  - DOMAIN-SUFFIX,irs01.com,REJECT
+  - DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com,REJECT
+  - DOMAIN-SUFFIX,hm.baidu.com,REJECT
+  - DOMAIN-SUFFIX,zz.bdstatic.com,REJECT
+  - DOMAIN-SUFFIX,beacon.tingyun.com,REJECT
+  - DOMAIN-SUFFIX,sb.scorecardresearch.com,REJECT
+  - DOMAIN-SUFFIX,liadm.com,REJECT
+  - DOMAIN-SUFFIX,agkn.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,beacon,REJECT
+  - DOMAIN-SUFFIX,pornhub.com,Porn
+  - DOMAIN-SUFFIX,phncdn.com,Porn
+  - DOMAIN-SUFFIX,xvideos.com,Porn
+  - DOMAIN-SUFFIX,xvideos-cdn.com,Porn
+  - DOMAIN-SUFFIX,jable.tv,Porn
+  - DOMAIN-SUFFIX,theporndude.com,Porn
+  - DOMAIN-SUFFIX,av01.tv,Porn
+  - DOMAIN-SUFFIX,papalah.com,Porn
+  - DOMAIN-SUFFIX,theav.xyz,Porn
+  - GEOIP,CN,China
+  - MATCH,DIRECT
