@@ -5,7 +5,7 @@ mode: Rule
 log-level: silent
 
 proxies:
-  - name: NL
+  - name: DE
     type: ss
     server: cymm.gzhpxb.com
     port: 51490
@@ -53,7 +53,7 @@ proxy-groups:
   - name: Porn
     type: select
     proxies:
-       - NL
+       - DE
        - DIRECT
 rules:
   - DOMAIN-SUFFIX,l.qq.com,REJECT
