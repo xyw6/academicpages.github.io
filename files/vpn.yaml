@@ -5,7 +5,7 @@ mode: Rule
 log-level: silent
 
 proxies:
-  - name: DE
+  - name: NL
     type: ss
     server: cymm.gzhpxb.com
     port: 51490
