@@ -5,9 +5,9 @@ mode: Rule
 log-level: silent
 
 proxies:
-  - name: DE
+  - name: NL
     type: ss
-    server: cymm.gzhpxb.com
+    server: ycy.gzhpxb.com
     port: 51490
     cipher: aes-128-gcm
     password: yangchaoyue
@@ -17,15 +17,6 @@ proxies:
   - name: LA
     type: ss
     server: gzhpxb.com
-    port: 51490
-    cipher: aes-128-gcm
-    password: yangchaoyue
-    udp: true
-    skip-cert-verify: true
-
-  - name: HK
-    type: ss
-    server: cmi.gzhpxb.com
     port: 51490
     cipher: aes-128-gcm
     password: yangchaoyue
@@ -46,14 +37,13 @@ proxy-groups:
     type: select
     proxies:
        - LA
-       - HK
        - CM
        - DIRECT
 
   - name: Porn
     type: select
     proxies:
-       - DE
+       - NL
        - DIRECT
 rules:
   - DOMAIN-SUFFIX,l.qq.com,REJECT
