@@ -23,6 +23,15 @@ proxies:
     udp: true
     skip-cert-verify: true
 
+  - name: RU
+    type: ss
+    server: lnd.gzhpxb.com
+    port: 51490
+    cipher: aes-128-gcm
+    password: yangchaoyue
+    udp: true
+    skip-cert-verify: true
+
   - name: CM
     type: ss
     server: cm.gzhpxb.com
@@ -37,6 +46,7 @@ proxy-groups:
     type: select
     proxies:
        - LA
+       - RU
        - CM
        - DIRECT
 
